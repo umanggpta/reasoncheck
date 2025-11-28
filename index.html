@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reason Check Podcast - Coming Soon</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define the Inter font family (Modern) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            /* Warm, Clean Aesthetic Palette */
+            --color-primary: #BCA88D; /* Accent color (Mid-tone earthy) */
+            --color-text-dark: #3E3F29; /* Near black (Very dark green/brown) */
+            --color-mid-tone: #7D8D86; /* New Muted Gray-Green (Secondary Text/Hint) */
+            --color-background: #F1F0E4; /* Very light cream body background */
+            --color-card-light: #EFE9E3; /* Lighter cream for sections */
+            --color-border: #BCA88D; /* Using primary for border/divider color */
+            
+            /* Custom disabled button colors */
+            --color-disabled-bg: #E3DCD5; 
+            --color-disabled-text: #A3A3A3; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+        }
+
+        /* Loading Spinner Animation */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--color-primary);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<!-- Removed centering classes to allow full width flow -->
+<body class="min-h-screen p-0"> 
+
+    <!-- Removed max-w-3xl for full screen width. Added responsive padding (p-4) to the main container. -->
+    <main class="w-full bg-white text-[var(--color-text-dark)] rounded-none shadow-2xl p-4 md:p-10 border-t-0 border-b-0 border border-[var(--color-border)] min-h-screen">
+        
+        <header class="text-center mb-10 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 flex items-center justify-center flex-wrap gap-3" style="color: var(--color-text-dark);">
+                Reason Check Podcast
+                <span class="px-3 py-1 text-sm font-bold rounded-full bg-red-500 text-white shadow-md">
+                    Coming Soon
+                </span>
+            </h1>
+            <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color: var(--color-mid-tone);">
+                Expected Launch: Early 2026
+            </p>
+            <p class="text-xl font-semibold" style="color: var(--color-primary);">
+                Scoring Truth, Not Theatre: We Slow Down Arguments to Expose Flawed Logic.
+            </p>
+            <p class="mt-4 max-w-2xl mx-auto" style="color: var(--color-mid-tone);">
+                Two brilliant people, opposite corners. Polarization is almost never justified by the evidence alone. Join us as we dismantle bad arguments, one premise at a time.
+            </p>
+        </header>
+
+        <!-- SOCIAL & PODCAST LINKS --><section id="social-links-section" class="pt-6 border-t border-[var(--color-border)] text-center max-w-4xl mx-auto">
+            <h4 class="text-lg font-semibold mb-4" style="color: var(--color-mid-tone);">Follow the Pre-Launch Discussion:</h4>
+            
+            <!-- Podcast Links --><div class="mb-6">
+                <p class="text-sm font-medium mb-2" style="color: var(--color-mid-tone);">Listen & Subscribe:</p>
+                <div class="flex justify-center flex-wrap gap-4 text-gray-600">
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Spotify"><i data-lucide="headphones" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Apple Podcasts"><i data-lucide="podcast" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="RSS Feed"><i data-lucide="rss" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Amazon Music"><i data-lucide="music" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+
+            <!-- Social Media Links --><div>
+                <p class="text-sm font-medium mb-2" style="color: var(--color-mid-tone);">Social Media:</p>
+                <div class="flex justify-center flex-wrap gap-4 text-gray-600">
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Twitter/X"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="YouTube"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="TikTok"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- LLM ARGUMENT ANALYZER --><section id="llm-analyzer-section" class="mt-12 pt-8 border-t border-[var(--color-border)] max-w-4xl mx-auto">
+            <div class="bg-[var(--color-card-light)] p-6 rounded-xl border border-[var(--color-border)]">
+                <h3 class="text-2xl font-bold mb-2 text-center flex items-center justify-center" style="color: var(--color-text-dark);">
+                    <span class="mr-2">✨</span> Instant Flaw Detector <span class="ml-2">✨</span>
+                </h3>
+                <p class="mb-6 text-center text-sm" style="color: var(--color-mid-tone);">
+                    While you wait for our first episode, try our AI tool. Paste any short argument (max ~150 words) and **let us analyze** its structure.
+                </p>
+
+                <textarea id="claim-input" rows="4" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] resize-none" placeholder="E.g., 'If we allow children to choose their bedtime, soon they'll be choosing their school curriculum, and eventually we'll have total anarchy.'"></textarea>
+                
+                <div class="mt-4 text-center">
+                    <button id="analyze-button" class="px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition duration-200 flex items-center justify-center mx-auto hover:opacity-90" style="background-color: var(--color-primary);" onclick="handleAnalyzeClaim()">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i>
+                        Analyze Claim
+                    </button>
+                </div>
+                
+                <div id="loading-spinner" class="mt-6 text-center hidden">
+                    <div class="spinner mx-auto"></div>
+                    <p class="mt-2 text-sm" style="color: var(--color-primary);">Deconstructing logic...</p>
+                </div>
+
+                <!-- Analysis Output Card --><div id="analysis-output" class="mt-6 p-6 border rounded-xl hidden bg-white" style="border-color: var(--color-primary);">
+                    <!-- Heading text color standardized to the dark variable for maximum contrast --><h4 class="text-lg font-bold text-[var(--color-text-dark)] mb-3 flex items-center">
+                        <i data-lucide="target" class="w-5 h-5 mr-2" style="color: var(--color-primary);"></i>
+                        Logical Analysis
+                    </h4>
+                    <div id="analysis-details" class="space-y-4">
+                        <!-- Results injected here --></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // --- Gemini API Configuration and Helpers ---
+        const apiKey = ""; 
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        
+        // Function for exponential backoff (retry up to 5 times)
+        async function retryFetch(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) return response;
+                    
+                    if (response.status === 429 && i < maxRetries - 1) { // Rate limit error
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+        
+        // --- LLM Feature Logic ---
+        
+        // DOM Elements for LLM
+        const claimInput = document.getElementById('claim-input');
+        const analyzeButton = document.getElementById('analyze-button');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const analysisOutput = document.getElementById('analysis-output');
+        const analysisDetails = document.getElementById('analysis-details');
+
+        // Structured JSON Schema for the LLM output
+        const responseSchema = {
+            type: "OBJECT",
+            properties: {
+                "coreClaim": { "type": "STRING", "description": "The main point or conclusion the argument is trying to make." },
+                "primaryPremise": { "type": "STRING", "description": "The strongest piece of evidence or assumption used to support the claim." },
+                "logicalFlaw": { "type": "STRING", "description": "The most significant logical fallacy present in the argument (e.g., Straw Man, Ad Hominem, Slippery Slope, Faulty Generalization). If none, state 'No obvious fallacy found'." },
+                "analysisSummary": { "type": "STRING", "description": "A brief, one-sentence explanation of why the Flaw was chosen or why the argument is weak/strong." }
+            }
+        };
+
+        async function handleAnalyzeClaim() {
+            const claim = claimInput.value.trim();
+            if (claim.length < 10) {
+                // Using a dark red color for error text
+                analysisDetails.innerHTML = `<p class="text-red-800">Please enter a claim or argument that is at least 10 characters long.</p>`;
+                analysisOutput.classList.remove('hidden');
+                return;
+            }
+
+            analyzeButton.disabled = true;
+            analyzeButton.classList.add('opacity-50', 'cursor-not-allowed');
+            loadingSpinner.classList.remove('hidden');
+            analysisOutput.classList.add('hidden');
+
+            const systemPrompt = "You are a world-class logician and critical thinking expert for the 'Reason Check Podcast'. Your task is to deconstruct a user-provided argument/claim and identify its structural components and the primary logical fallacy, if one exists. Be objective, concise, and professional.";
+            const userQuery = `Analyze the following argument: "${claim}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: responseSchema
+                }
+            };
+
+            try {
+                const response = await retryFetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const jsonText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                
+                if (!jsonText) {
+                    throw new Error("API returned no content.");
+                }
+
+                const analysis = JSON.parse(jsonText);
+                displayAnalysis(analysis);
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                // Using a dark red color for error text
+                analysisDetails.innerHTML = `<p class="text-red-800">🚨 Analysis failed: Could not process the claim due to an API error. Please try a different argument.</p>`;
+                analysisOutput.classList.remove('hidden');
+            } finally {
+                loadingSpinner.classList.add('hidden');
+                analyzeButton.disabled = false;
+                analyzeButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        function displayAnalysis(analysis) {
+            analysisOutput.classList.remove('hidden');
+            analysisDetails.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-3 rounded-lg" style="background-color: var(--color-background);">
+                        <p class="text-sm font-medium" style="color: var(--color-mid-tone);">Core Claim</p>
+                        <p class="text-[var(--color-text-dark)] font-semibold">${analysis.coreClaim}</p>
+                    </div>
+                    <div class="p-3 rounded-lg" style="background-color: var(--color-background);">
+                        <p class="text-sm font-medium" style="color: var(--color-mid-tone);">Primary Premise</p>
+                        <p class="text-[var(--color-text-dark)] font-semibold">${analysis.primaryPremise}</p>
+                    </div>
+                </div>
+                
+                <div class="p-3 rounded-lg border-l-4 border-red-600" style="background-color: #FEF2F2;">
+                    <p class="text-sm text-red-700 font-medium">Logical Flaw Identified</p>
+                    <p class="text-xl font-bold text-red-800">${analysis.logicalFlaw}</p>
+                </div>
+
+                <div class="p-3 rounded-lg" style="background-color: var(--color-background);">
+                    <p class="text-sm font-medium" style="color: var(--color-mid-tone);">Structural Assessment</p>
+                    <p class="text-[var(--color-text-dark)]">${analysis.analysisSummary}</p>
+                </div>
+            `;
+            // Re-create lucide icons inside the new dynamic content
+            lucide.createIcons();
+        }
+        
+    </script>
+</body>
+</html>
