@@ -6,10 +6,14 @@
     <title>Reason Check Podcast</title>
     
     <!-- Meta Tags for SEO and Display -->
-    <meta name="description" content="The podcast that exposes flawed arguments, motivated reasoning, and cognitive biases. We score truth, not theatre. Coming soon: December 2025.">
+     <meta property="og:url"                content="https://reasoncheck.com" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Reason Check Podcast" />
+    <meta property="og:description"        content="The podcast that exposes flawed arguments, motivated reasoning, and cognitive biases. We score truth, not theatre. Coming soon: December 2025." />
+    <meta property="og:image"              content="/meta_image.png" />
+
     <!-- Favicon: Using a base64 encoded Balance Scale emoji (⚖️) for the theme -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
-    
     <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Lucide Icons --><script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -55,8 +59,7 @@
 
 <body class="min-h-screen p-0"> 
 
-    <!-- Removed max-w-3xl for full screen width. Added responsive padding (p-4) to the main container. -->
-    <main class="w-full bg-white text-[var(--color-text-dark)] rounded-none shadow-2xl p-4 md:p-10 border-t-0 border-b-0 border border-[var(--color-border)] min-h-screen">
+    <!-- Removed max-w-3xl for full screen width. Added responsive padding (p-4) to the main container. --><main class="w-full bg-white text-[var(--color-text-dark)] rounded-none shadow-2xl p-4 md:p-10 border-t-0 border-b-0 border border-[var(--color-border)] min-h-screen">
         
         <header class="text-center mb-10 max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 flex items-center justify-center flex-wrap gap-3" style="color: var(--color-text-dark);">
@@ -78,7 +81,7 @@
 
         <!-- DIAGNOSTIC CHECK --><section id="diagnostic-test-section" class="mt-8 pt-6 border-t border-[var(--color-border)] max-w-4xl mx-auto">
             <div class="bg-[var(--color-card-light)] p-6 rounded-xl border border-[var(--color-border)]">
-                <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--color-text-dark);">
+                <h3 class="text-2xl font-bold mb-4 reorganize text-center" style="color: var(--color-text-dark);">
                     Diagnostic Check: The Core Problem
                 </h3>
                 
@@ -88,20 +91,17 @@
                     </p>
                     
                     <div class="space-y-3 mb-6">
-                        <!-- Option 1: The 'Correct' Psychological Answer -->
-                        <label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
+                        <!-- Option 1: The 'Correct' Psychological Answer --><label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
                             <input type="radio" name="diagnosis" value="psychology" class="form-radio h-5 w-5 mr-3" style="color: var(--color-primary);" required>
                             <span class="font-medium text-[var(--color-text-dark)]">A. Motivated Reasoning and Cognitive Biases. (The mind protects itself.)</span>
                         </label>
                         
-                        <!-- Option 2: The Ego Answer -->
-                        <label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
+                        <!-- Option 2: The Ego Answer --><label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
                             <input type="radio" name="diagnosis" value="ego" class="form-radio h-5 w-5 mr-3" style="color: var(--color-primary);">
                             <span class="font-medium text-[var(--color-text-dark)]">B. Simple Ego and Professional Reputation. (They can't afford to be wrong.)</span>
                         </label>
 
-                        <!-- Option 3: The Information Answer (Common Misconception) -->
-                        <label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
+                        <!-- Option 3: The Information Answer (Common Misconception) --><label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
                             <input type="radio" name="diagnosis" value="data" class="form-radio h-5 w-5 mr-3" style="color: var(--color-primary);">
                             <span class="font-medium text-[var(--color-text-dark)]">C. Lack of Data or Incomplete Information. (They just haven't seen the final evidence.)</span>
                         </label>
@@ -115,8 +115,7 @@
                 </form>
 
                 <div id="diagnostic-result" class="mt-4 p-4 rounded-lg hidden text-center" style="background-color: #FEF2F2; color: #7F1D1D;">
-                    <!-- Result text injected here -->
-                </div>
+                    <!-- Result text injected here --></div>
             </div>
         </section>
 
@@ -126,7 +125,11 @@
             <!-- Podcast Links --><div class="mb-6">
                 <p class="text-sm font-medium mb-2" style="color: var(--color-mid-tone);">Listen & Subscribe:</p>
                 <div class="flex justify-center flex-wrap gap-4 text-gray-600">
-                    <!-- Spotify Icon Updated to list-music --><a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Spotify"><i data-lucide="list-music" class="w-6 h-6"></i></a>
+                    <!-- Spotify Logo Icon (Using inline SVG for guaranteed rendering) --><a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Spotify">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm4.35 17.518c-.244.394-.741.524-1.134.281-2.015-1.21-4.5-1.487-7.42-1.282-.505.034-.925-.337-.959-.843s.337-.925.843-.959c3.273-.225 6.096.098 8.356 1.458.394.244.524.741.281 1.134zm1.908-3.352c-.287.464-.87.625-1.333.337-2.327-1.47-5.834-1.897-9.873-1.134-.576.108-1.118-.231-1.226-.807-.108-.576.231-1.118.807-1.226 4.665-.875 8.587-.394 11.233 1.341.464.287.625.87.337 1.333zm.252-3.411c-2.617-1.636-6.844-2.093-11.455-1.18-.619.122-1.224-.265-1.346-.884-.122-.619.265-1.224.884-1.346 5.253-1.036 9.816-.5 12.825 1.357.545.342.695 1.05.353 1.595-.342.545-1.05.695-1.595.353z"/>
+                        </svg>
+                    </a>
                     <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Apple Podcasts"><i data-lucide="podcast" class="w-6 h-6"></i></a>
                     <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="RSS Feed"><i data-lucide="rss" class="w-6 h-6"></i></a>
                     <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Amazon Music"><i data-lucide="music" class="w-6 h-6"></i></a>
@@ -137,4 +140,223 @@
                 <p class="text-sm font-medium mb-2" style="color: var(--color-mid-tone);">Social Media:</p>
                 <div class="flex justify-center flex-wrap gap-4 text-gray-600">
                     <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="Twitter/X"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-                    <a href="#" class="transition hover:opacity-
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="YouTube"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="TikTok"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="#" class="transition hover:opacity-75" style="color: var(--color-primary);" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- LLM ARGUMENT ANALYZER --><section id="llm-analyzer-section" class="mt-12 pt-8 border-t border-[var(--color-border)] max-w-4xl mx-auto">
+            <div class="bg-[var(--color-card-light)] p-6 rounded-xl border border-[var(--color-border)]">
+                <h3 class="text-2xl font-bold mb-2 text-center flex items-center justify-center" style="color: var(--color-text-dark);">
+                    <span class="mr-2">✨</span> Instant Flaw Detector <span class="ml-2">✨</span>
+                </h3>
+                <p class="mb-6 reorganize text-center text-sm" style="color: var(--color-mid-tone);">
+                    While you wait for our first episode, try our AI tool. Paste any short argument (max ~150 words) and <strong>let us analyze</strong> its structure.
+                </p>
+
+                <textarea id="claim-input" rows="4" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] resize-none" placeholder="E.g., 'If we allow children to choose their bedtime, soon they'll be choosing their school curriculum, and eventually we'll have total anarchy.'"></textarea>
+                
+                <div class="mt-4 text-center">
+                    <button id="analyze-button" class="px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition duration-200 flex items-center justify-center mx-auto hover:opacity-90" style="background-color: var(--color-primary);" onclick="handleAnalyzeClaim()">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2"></i>
+                        Analyze Claim
+                    </button>
+                </div>
+                
+                <div id="loading-spinner" class="mt-6 text-center hidden">
+                    <div class="spinner mx-auto"></div>
+                    <p class="mt-2 text-sm" style="color: var(--color-primary);">Deconstructing logic...</p>
+                </div>
+
+                <!-- Analysis Output Card --><div id="analysis-output" class="mt-6 p-6 border rounded-xl hidden bg-white" style="border-color: var(--color-primary);">
+                    <!-- Heading text color standardized to the dark variable for maximum contrast --><h4 class="text-lg font-bold text-[var(--color-text-dark)] mb-3 flex items-center">
+                        <i data-lucide="target" class="w-5 h-5 mr-2" style="color: var(--color-primary);"></i>
+                        Logical Analysis
+                    </h4>
+                    <div id="analysis-details" class="space-y-4">
+                        <!-- Results injected here --></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Initialize Lucide Icons on load to ensure all elements are ready
+        window.onload = function() {
+            // Only create the remaining icons, as the Spotify one is now a direct SVG.
+            lucide.createIcons();
+        };
+        
+        // --- Gemini API Configuration and Helpers ---
+        const apiKey = ""; 
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        
+        // Function for exponential backoff (retry up to 5 times)
+        async function retryFetch(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (response.ok) return response;
+                    
+                    if (response.status === 429 && i < maxRetries - 1) { // Rate limit error
+                        const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        continue;
+                    }
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+        
+        // --- DIAGNOSTIC QUIZ LOGIC ---
+        function handleDiagnosticSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('diagnostic-form');
+            const resultDiv = document.getElementById('diagnostic-result');
+            const selected = form.querySelector('input[name="diagnosis"]:checked');
+            
+            if (!selected) return;
+
+            resultDiv.classList.remove('hidden');
+            resultDiv.style.backgroundColor = 'var(--color-background)';
+            resultDiv.style.color = 'var(--color-text-dark)';
+
+            let message = "";
+            let borderColor = 'var(--color-primary)';
+
+            if (selected.value === 'psychology') {
+                message = `
+                    <p class="font-bold text-xl mb-2">You nailed it. Welcome aboard.</p>
+                    <p>The core problem is rarely lack of data (Option C). It's <strong>Motivated Reasoning</strong>. People use their brilliance to justify conclusions they already want to believe. This is the exact psychological flaw we dissect and expose every week on the podcast.</p>
+                `;
+                borderColor = 'var(--color-primary)';
+            } else {
+                message = `
+                    <p class="font-bold text-xl mb-2">A good first step, but we go deeper.</p>
+                    <p>While ego and data gaps play a role, we argue that the root cause is <strong>Motivated Reasoning</strong> (Option A). Our show focuses on the cognitive mechanisms—the <em>flawed logic</em>—that allows brilliant minds to cling to weak arguments. Stick around, and we'll show you how to detect it.</p>
+                `;
+                borderColor = '#F59E0B'; // A warning/neutral color
+            }
+
+            resultDiv.style.border = `2px solid ${borderColor}`;
+            resultDiv.innerHTML = message;
+
+            // Hide the form after submission
+            form.classList.add('hidden');
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+        // --- LLM Feature Logic ---
+        
+        // DOM Elements for LLM
+        const claimInput = document.getElementById('claim-input');
+        const analyzeButton = document.getElementById('analyze-button');
+        const loadingSpinner = document.getElementById('loading-spinner');
+        const analysisOutput = document.getElementById('analysis-output');
+        const analysisDetails = document.getElementById('analysis-details');
+
+        // Structured JSON Schema for the LLM output
+        const responseSchema = {
+            type: "OBJECT",
+            properties: {
+                "coreClaim": { "type": "STRING", "description": "The main point or conclusion the argument is trying to make." },
+                "primaryPremise": { "type": "STRING", "description": "The strongest piece of evidence or assumption used to support the claim." },
+                "logicalFlaw": { "type": "STRING", "description": "The most significant logical fallacy present in the argument (e.g., Straw Man, Ad Hominem, Slippery Slope, Faulty Generalization). If none, state 'No obvious fallacy found'." },
+                "analysisSummary": { "type": "STRING", "description": "A brief, one-sentence explanation of why the Flaw was chosen or why the argument is weak/strong." }
+            }
+        };
+
+        async function handleAnalyzeClaim() {
+            const claim = claimInput.value.trim();
+            if (claim.length < 10) {
+                // Using a dark red color for error text
+                analysisDetails.innerHTML = `<p class="text-red-800">Please enter a claim or argument that is at least 10 characters long.</p>`;
+                analysisOutput.classList.remove('hidden');
+                return;
+            }
+
+            analyzeButton.disabled = true;
+            analyzeButton.classList.add('opacity-50', 'cursor-not-allowed');
+            loadingSpinner.classList.remove('hidden');
+            analysisOutput.classList.add('hidden');
+
+            const systemPrompt = "You are a world-class logician and critical thinking expert for the 'Reason Check Podcast'. Your task is to deconstruct a user-provided argument/claim and identify its structural components and the primary logical fallacy, if one exists. Be objective, concise, and professional.";
+            const userQuery = `Analyze the following argument: "${claim}"`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: responseSchema
+                }
+            };
+
+            try {
+                const response = await retryFetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const jsonText = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                
+                if (!jsonText) {
+                    throw new Error("API returned no content.");
+                }
+
+                const analysis = JSON.parse(jsonText);
+                displayAnalysis(analysis);
+
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                // Using a dark red color for error text
+                analysisDetails.innerHTML = `<p class="text-red-800">🚨 Analysis failed: Could not process the claim due to an API error. Please try a different argument.</p>`;
+                analysisOutput.classList.remove('hidden');
+            } finally {
+                loadingSpinner.classList.add('hidden');
+                analyzeButton.disabled = false;
+                analyzeButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        function displayAnalysis(analysis) {
+            analysisOutput.classList.remove('hidden');
+            analysisDetails.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-3 rounded-lg" style="background-color: var(--color-background);">
+                        <p class="text-sm font-medium" style="color: var(--color-mid-tone);">Core Claim</p>
+                        <p class="text-[var(--color-text-dark)] font-semibold">${analysis.coreClaim}</p>
+                    </div>
+                    <div class="p-3 rounded-lg" style="background-color: var(--color-background);">
+                        <p class="text-sm font-medium" style="color: var(--color-mid-tone);">Primary Premise</p>
+                        <p class="text-[var(--color-text-dark)] font-semibold">${analysis.primaryPremise}</p>
+                    </div>
+                </div>
+                
+                <div class="p-3 rounded-lg border-l-4 border-red-600" style="background-color: #FEF2F2;">
+                    <p class="text-sm text-red-700 font-medium">Logical Flaw Identified</p>
+                    <p class="text-xl font-bold text-red-800">${analysis.logicalFlaw}</p>
+                </div>
+
+                <div class="p-3 rounded-lg" style="background-color: var(--color-background);">
+                    <p class="text-sm font-medium" style="color: var(--color-mid-tone);">Structural Assessment</p>
+                    <p class="text-[var(--color-text-dark)]">${analysis.analysisSummary}</p>
+                </div>
+            `;
+            // Re-create lucide icons inside the new dynamic content
+            lucide.createIcons();
+        }
+        
+    </script>
+</body>
+</html>
