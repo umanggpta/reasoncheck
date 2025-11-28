@@ -12,12 +12,12 @@
         
         :root {
             /* Warm, Clean Aesthetic Palette */
-            --color-primary: #BCA88D; /* Accent color (Mid-tone earthy) */
-            --color-text-dark: #3E3F29; /* Near black (Very dark green/brown) */
-            --color-mid-tone: #7D8D86; /* New Muted Gray-Green (Secondary Text/Hint) */
+            --color-primary: #333333; /* Dark Gray - NEW for Accent/Prominent Text */
+            --color-text-dark: #000000; /* Pure Black - NEW for Main Text */
+            --color-mid-tone: #555555; /* Medium Dark Gray - NEW for Secondary Text/Hint */
             --color-background: #F1F0E4; /* Very light cream body background */
             --color-card-light: #EFE9E3; /* Lighter cream for sections */
-            --color-border: #BCA88D; /* Using primary for border/divider color */
+            --color-border: #D0D0D0; /* Subtle Light Gray - NEW for Borders/Outlines */
             
             /* Custom disabled button colors */
             --color-disabled-bg: #E3DCD5; 
@@ -46,11 +46,9 @@
         }
     </style>
 </head>
-<!-- Removed centering classes to allow full width flow -->
-<body class="min-h-screen p-0"> 
+<!-- Removed centering classes to allow full width flow --><body class="min-h-screen p-0"> 
 
-    <!-- Removed max-w-3xl for full screen width. Added responsive padding (p-4) to the main container. -->
-    <main class="w-full bg-white text-[var(--color-text-dark)] rounded-none shadow-2xl p-4 md:p-10 border-t-0 border-b-0 border border-[var(--color-border)] min-h-screen">
+    <!-- Removed max-w-3xl for full screen width. Added responsive padding (p-4) to the main container. --><main class="w-full bg-white text-[var(--color-text-dark)] rounded-none shadow-2xl p-4 md:p-10 border-t-0 border-b-0 border border-[var(--color-border)] min-h-screen">
         
         <header class="text-center mb-10 max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 flex items-center justify-center flex-wrap gap-3" style="color: var(--color-text-dark);">
@@ -66,9 +64,49 @@
                 Scoring Truth, Not Theatre: We Slow Down Arguments to Expose Flawed Logic.
             </p>
             <p class="mt-4 max-w-2xl mx-auto" style="color: var(--color-mid-tone);">
-                Two brilliant people, opposite corners. Polarization is almost never justified by the evidence alone. Join us as we dismantle bad arguments, one premise at a time.
+                Why do debating podcasts focus on <em>who</em> wins rather than <em>how</em> the argument is constructed? Polarization is almost never justified by the evidence alone. Join us as we dismantle bad arguments, one premise at a time.
             </p>
         </header>
+
+        <!-- DIAGNOSTIC CHECK --><section id="diagnostic-test-section" class="mt-8 pt-6 border-t border-[var(--color-border)] max-w-4xl mx-auto">
+            <div class="bg-[var(--color-card-light)] p-6 rounded-xl border border-[var(--color-border)]">
+                <h3 class="text-2xl font-bold mb-4 text-center" style="color: var(--color-text-dark);">
+                    Diagnostic Check: The Core Problem
+                </h3>
+                
+                <form id="diagnostic-form" onsubmit="handleDiagnosticSubmit(event)">
+                    <p class="text-lg font-medium mb-4" style="color: var(--color-primary);">
+                        When the evidence is overwhelming, why do brilliant people almost never change their minds?
+                    </p>
+                    
+                    <div class="space-y-3 mb-6">
+                        <!-- Option 1: The 'Correct' Psychological Answer --><label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
+                            <input type="radio" name="diagnosis" value="psychology" class="form-radio h-5 w-5 mr-3" style="color: var(--color-primary);" required>
+                            <span class="font-medium text-[var(--color-text-dark)]">A. Motivated Reasoning and Cognitive Biases. (The mind protects itself.)</span>
+                        </label>
+                        
+                        <!-- Option 2: The Ego Answer --><label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
+                            <input type="radio" name="diagnosis" value="ego" class="form-radio h-5 w-5 mr-3" style="color: var(--color-primary);">
+                            <span class="font-medium text-[var(--color-text-dark)]">B. Simple Ego and Professional Reputation. (They can't afford to be wrong.)</span>
+                        </label>
+
+                        <!-- Option 3: The Information Answer (Common Misconception) --><label class="flex items-center p-3 rounded-lg border cursor-pointer hover:bg-white transition" style="border-color: var(--color-border);">
+                            <input type="radio" name="diagnosis" value="data" class="form-radio h-5 w-5 mr-3" style="color: var(--color-primary);">
+                            <span class="font-medium text-[var(--color-text-dark)]">C. Lack of Data or Incomplete Information. (They just haven't seen the final evidence.)</span>
+                        </label>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition duration-200 hover:opacity-90" style="background-color: var(--color-primary);">
+                            Submit Answer
+                        </button>
+                    </div>
+                </form>
+
+                <div id="diagnostic-result" class="mt-4 p-4 rounded-lg hidden text-center" style="background-color: #FEF2F2; color: #7F1D1D;">
+                    <!-- Result text injected here --></div>
+            </div>
+        </section>
 
         <!-- SOCIAL & PODCAST LINKS --><section id="social-links-section" class="pt-6 border-t border-[var(--color-border)] text-center max-w-4xl mx-auto">
             <h4 class="text-lg font-semibold mb-4" style="color: var(--color-mid-tone);">Follow the Pre-Launch Discussion:</h4>
@@ -100,7 +138,7 @@
                     <span class="mr-2">✨</span> Instant Flaw Detector <span class="ml-2">✨</span>
                 </h3>
                 <p class="mb-6 text-center text-sm" style="color: var(--color-mid-tone);">
-                    While you wait for our first episode, try our AI tool. Paste any short argument (max ~150 words) and **let us analyze** its structure.
+                    While you wait for our first episode, try our AI tool. Paste any short argument (max ~150 words) and <strong>let us analyze</strong> its structure.
                 </p>
 
                 <textarea id="claim-input" rows="4" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] resize-none" placeholder="E.g., 'If we allow children to choose their bedtime, soon they'll be choosing their school curriculum, and eventually we'll have total anarchy.'"></textarea>
@@ -159,6 +197,45 @@
             }
         }
         
+        // --- DIAGNOSTIC QUIZ LOGIC ---
+        function handleDiagnosticSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('diagnostic-form');
+            const resultDiv = document.getElementById('diagnostic-result');
+            const selected = form.querySelector('input[name="diagnosis"]:checked');
+            
+            if (!selected) return;
+
+            resultDiv.classList.remove('hidden');
+            resultDiv.style.backgroundColor = 'var(--color-background)';
+            resultDiv.style.color = 'var(--color-text-dark)';
+
+            let message = "";
+            let borderColor = 'var(--color-primary)';
+
+            if (selected.value === 'psychology') {
+                message = `
+                    <p class="font-bold text-xl mb-2">You nailed it. Welcome aboard.</p>
+                    <p>The core problem is rarely lack of data (Option C). It's <strong>Motivated Reasoning</strong>. People use their brilliance to justify conclusions they already want to believe. This is the exact psychological flaw we dissect and expose every week on the podcast.</p>
+                `;
+                borderColor = 'var(--color-primary)';
+            } else {
+                message = `
+                    <p class="font-bold text-xl mb-2">A good first step, but we go deeper.</p>
+                    <p>While ego and data gaps play a role, we argue that the root cause is <strong>Motivated Reasoning</strong> (Option A). Our show focuses on the cognitive mechanisms—the <em>flawed logic</em>—that allows brilliant minds to cling to weak arguments. Stick around, and we'll show you how to detect it.</p>
+                `;
+                borderColor = '#F59E0B'; // A warning/neutral color
+            }
+
+            resultDiv.style.border = `2px solid ${borderColor}`;
+            resultDiv.innerHTML = message;
+
+            // Hide the form after submission
+            form.classList.add('hidden');
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
         // --- LLM Feature Logic ---
         
         // DOM Elements for LLM
