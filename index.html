@@ -19,7 +19,7 @@
      <meta property="og:url"                content="https://reasoncheck.com" />
     <meta property="og:type"               content="website" />
     <meta property="og:title"              content="Reason Check Podcast" />
-    <meta property="og:description"        content="The podcast that exposes flawed arguments, motivated reasoning, and cognitive biases. We score truth, not theatre. Coming soon: December 2025." />
+    <meta property="og:description"        content="The podcast that exposes flawed arguments, motivated reasoning, and cognitive biases. We score truth, not theatre. Season 1 out now!" />
     <meta property="og:image"              content="https://raw.githubusercontent.com/umanggpta/reasoncheck/refs/heads/main/meta_image.png" />
 
     <!-- Favicon: Using a base64 encoded Balance Scale emoji (⚖️) for the theme -->
@@ -60,6 +60,14 @@
             animation: spin 1s linear infinite;
         }
 
+        .center-iframe {
+            display: block;
+            margin-left: auto; /* Automatic left margin */
+            margin-right: auto; /* Automatic right margin */
+            width: 500px;      /* Important: Must have a specified width (not 100%) */
+            height: 300px;     /* Optional: Set a specific height */
+        }
+
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -75,11 +83,11 @@
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 flex items-center justify-center flex-wrap gap-3" style="color: var(--color-text-dark);">
                 Reason Check Podcast
                 <span class="px-3 py-1 text-sm font-bold rounded-full bg-red-500 text-white shadow-md">
-                    Coming Soon
+                    Season 1
                 </span>
             </h1>
             <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color: var(--color-mid-tone);">
-                Expected Launch: December 2025
+                Season 1, Episode 1 Out Now!
             </p>
             <p class="text-xl font-semibold" style="color: var(--color-primary);">
                 Scoring Truth, Not Theatre: We Slow Down Arguments to Expose Flawed Logic.
@@ -88,6 +96,14 @@
                 Why do debating podcasts focus on <em>who</em> wins rather than <em>how</em> the argument is constructed? Polarization is almost never justified by the evidence alone. Join us as we dismantle bad arguments, one premise at a time.
             </p>
         </header>
+
+
+
+        <!-- Youtube Embedded Video --><section id="youtube-embedded-video" class="mt-8 pt-6 border-t border-[var(--color-border)] max-w-4xl mx-auto">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=V3Kod0sv9SrHeGAB&amp;list=PLiiv_WXKkYtDrGcpxwXnAXGyyyVmo_NiR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="center-iframe" ></iframe>              
+            
+        </section>
+
 
         <!-- DIAGNOSTIC CHECK --><section id="diagnostic-test-section" class="mt-8 pt-6 border-t border-[var(--color-border)] max-w-4xl mx-auto">
             <div class="bg-[var(--color-card-light)] p-6 rounded-xl border border-[var(--color-border)]">
@@ -132,11 +148,11 @@
         <!-- SOCIAL & PODCAST LINKS --><section id="social-links-section" class="pt-6 border-t border-[var(--color-border)] text-center max-w-4xl mx-auto">
             <div class="mb-6">
             
-            <h4 class="text-lg font-semibold mb-4" style="color: var(--color-mid-tone);">Listen to the Teaser & What Reason Check is About:</h4>
+            <h4 class="text-lg font-semibold mb-4" style="color: var(--color-mid-tone);">Listen to Stephen on What Reason Check is About:</h4>
 
             <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/episode/4JTQINDjTjSC6TyfxMfEbb?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
              </div>
-            <h4 class="text-lg font-semibold mb-4" style="color: var(--color-mid-tone);">Follow the Pre-Launch Discussion:</h4>
+            <h4 class="text-lg font-semibold mb-4" style="color: var(--color-mid-tone);">Follow the Discussion:</h4>
 
             <!-- Podcast Links --><div class="mb-6">
                 <p class="text-sm font-medium mb-2" style="color: var(--color-mid-tone);">Listen & Subscribe:</p>
@@ -179,7 +195,7 @@
                     <span class="mr-2">✨</span> Instant Flaw Detector <span class="ml-2">✨</span>
                 </h3>
                 <p class="mb-6 reorganize text-center text-sm" style="color: var(--color-mid-tone);">
-                    While you wait for our first episode, try our AI tool. Paste any short argument (max ~150 words) and <strong>let us analyze</strong> its structure.
+                    Do you like to dissect arguments? Try our AI tool. Paste any short argument (max ~150 words) and <strong>let us analyze</strong> its structure.
                 </p>
 
                 <textarea id="claim-input" rows="4" class="w-full p-4 rounded-lg bg-white border border-gray-300 text-gray-900 placeholder-gray-400 focus:ring-[var(--color-primary)] focus:border-[var(--color-primary)] resize-none" placeholder="E.g., 'If we allow children to choose their bedtime, soon they'll be choosing their school curriculum, and eventually we'll have total anarchy.'"></textarea>
